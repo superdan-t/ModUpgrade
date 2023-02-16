@@ -1,6 +1,14 @@
 # ModUpgrade
 
-This is a command-line utility for downloading updates for Minecraft mods. Mods can download their own new versions, but cannot remove old versions since they are locked while the game is running. This utility will download the new mod, verify the mod ID and mcversion if they were supplied, move any conflicting mods (e.g. old versions) to an archive folder, and then add in the new mod. It should be launched at game shutdown, as it only tries for 60 seconds.
+## Deprecated Project Notice
+I have not updated or otherwise maintained this project since early 2020, my first semester of undergrad. The code hasn’t been relevant in any of my technical projects since then, and I have no intention of ever using this project again. My program design skills, quality standards, language preferences, and other technical abilities have developed a lot since 2019, assisted by my interest in maintaining projects outside of academia. That being said, I have decided to keep my old projects public as I reflect on my own educational journey.
+
+## Security Concerns
+This program can download arbitrary Java jar files, but makes no effort to verify their authenticity. Since this program wasn't intended to be used directly by end users, it is the duty of developers to ensure their mod doesn't allow attackers access to distribute malicious updates to users. Also, mod developers who become evil could use this to push malicious updates of their own mod. Using modpack managers is probably more secure than something like this.
+
+## Description
+
+This is a command-line utility to enable auto-updating for Minecraft mods. Mods can download their own new versions, but cannot remove old versions since they are locked while the game is running. This utility will download the new mod, verify the mod ID and mcversion if they were supplied, move any conflicting mods (e.g. old versions) to an archive folder, and then add in the new mod. It should be launched at game shutdown, as it only tries for 60 seconds.
 
 ## Options
 
